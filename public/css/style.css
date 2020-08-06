@@ -1,0 +1,424 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'latolight';
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'iris_fontregular';
+    src: url('fonts/iris_font_regular-webfont.woff2') format('woff2'),
+         url('fonts/iris_font_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('fonts/lato-light-webfont.woff2') format('woff2'),
+         url('fonts/lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.alert-box {
+    color:#555;
+    border-radius:10px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+    position: fixed;
+	top: 20px;
+	width:500px;
+		left:50%;
+	top:5%;
+	margin-left:-300px;
+	z-index: 999;
+     -webkit-animation: bouncing 5s 2s forwards linear;
+}
+
+@-webkit-keyframes bouncing {
+ 0% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+ }
+ 50% {
+    opacity: 0.5;
+    -webkit-animation-timing-function: ease-out;
+ }
+ 100% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+ }
+}
+
+
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.warning {
+    background:#ffecec;
+    border:1px solid #f5aca6;
+}
+
+header {
+    height: 30vh;
+    background: linear-gradient(to bottom, transparent, rgb(235, 235, 235)), url('../images/chris-lawton-5IHz5WhosQE-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 10vh;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-family: 'iris_fontregular';
+}
+
+header h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: 'iris_fontregular';
+}
+
+main {
+    padding: 5% 20%;
+    background: rgb(235, 235, 235);
+}
+
+#desc {
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+#survey, #new {
+    margin: 50px 0;
+}
+
+.question {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.question::after {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.4);
+    content: '';
+}
+
+.question .intitule {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.question textarea {
+    width: 96%;
+    min-height: 100px;
+    border-color: rgba(222, 222, 222, 0.85);
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 2%;
+    font-size: 1.1em;
+}
+
+.question .radios input {
+    display: none;
+}
+
+.question .radios {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 50%;
+}
+
+.question .radios label {
+    display: block;
+    padding: 20px 18px;
+    border-radius: 10px;
+    background: #b4b4b4;
+    cursor: pointer;
+}
+
+.question .radios input:checked~label {
+    background: rgb(58, 149, 240);
+}
+
+input[type=submit] {
+    display: block;
+    margin: 50px auto;
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    background: rgb(152, 208, 127);
+    border: none;
+    color: white;
+    font-family: 'iris_fontregular';
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+input[type=submit]:hover {
+    background: rgb(53, 167, 71);
+}
+
+footer {
+    background: rgb(235, 235, 235);
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+
+#dashboard_results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dashboard_results p {
+    font-size: 1.1em;
+}
+
+.unavailable {
+    cursor: disabled;
+    display: block;
+    padding: 20px 20px;
+    background: #75858e;
+    color: white;
+    font-family: 'iris_fontregular';
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: background 0.5s;
+}
+
+.unavailable:hover {
+    background: #75858e;
+}
+
+.btn_results {
+    display: block;
+    padding: 20px 20px;
+    background: #75858e;
+    color: white;
+    font-family: 'iris_fontregular';
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.5s;
+}
+
+.btn_results:hover {
+    background: #1b74a5;
+}
+
+
+
+#edit {
+    margin-top: 40px;
+}
+
+#edit h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.question_admin {
+    margin: 15px 0;
+}
+
+#btn_add {
+    display: block;
+    width: 200px;
+    margin: 50px auto;
+    padding: 20px 20px;
+    text-align: center;
+    background: #75858e;
+    color: white;
+    font-family: 'iris_fontregular';
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.5s;
+}
+
+#btn_add:hover {
+    background: #30a04a;
+}
+
+
+.question_new {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.question_new * {
+    display: block;
+}
+
+.type {
+    display: flex;
+    align-items: center;
+}
+
+.question_new label {
+    margin: 10px 0;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.question_new select {
+    height: 40px;
+    width: 150px;
+    margin-left: 20px;
+    border-radius: 10px;
+    outline: none;
+    border-color: rgba(222, 222, 222, 0.85);
+}
+
+.question_new textarea {
+    width: 96%;
+    min-height: 100px;
+    border-color: rgba(222, 222, 222, 0.85);
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 2%;
+    font-size: 1.1em;
+}
+
+#user_info {
+    margin: 50px 0;
+}
+
+#user_info p {
+    font-size: 1.1em;
+}
+
+#user_info div {
+    margin: 20px 0;
+}
+
+#user_info div label {
+    display: block;
+    margin: 5px 0;
+}
+
+#user_info div input {
+    width: 96%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border-color: rgba(222, 222, 222, 0.85);
+    border-width: 1px;
+    padding: 0 2%;
+    font-size: 1.1em;
+}
+
+
+#thanks {
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent, transparent, rgb(235, 235, 235)), url('../images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 10vh;
+    position: relative;
+}
+
+#thanks::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.33), rgb(235, 235, 235));
+}
+
+#thanks div {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#thanks div h1 {
+    font-size: 5em;
+    font-family: 'iris_fontregular';
+    color:  white;
+    position: absolute;
+    z-index: 2;
+    width: 50vw;
+    left: 25vw;
+    top: 30vh;
+}
+
+#thanks div p {
+    width: 50vw;
+    left: 25vw;
+    top: 50vh;
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+
+.delete {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/delete.png');
+    background-size: contain;
+    transition: background 0.5s;
+    margin-left: 15px;
+}
+
+.delete:hover {
+    background: url('../images/delete_red.png');
+    background-size: contain;
+}
+
+#error {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 95vh;
+    color: white;
+}
+
+#error h1 {
+    padding-top: 20vh;
+    padding-left: 20vw;
+    font-size: 3em;
+}
+
+#error p {
+    font-size: 1.8em;
+    padding-top: 10px;
+    padding-left: 25vw;
+}
+
+.teapot {
+    background: url('../images/teapot.png');
+    background-size: cover;
+}
+
+.error404 {
+    background: url('../images/404.png');
+    background-size: cover;
+}

@@ -1,0 +1,25 @@
+{
+    "name": "vendor/myframework",
+    "require": {
+        "symfony/http-foundation": "^4.2",
+        "twig/twig": "^1.16"
+    },
+    "authors": [
+        {
+            "name": "Gabriel",
+            "email": "gnativ910e@ensc.fr"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Components\\": "components/",
+        "Controllers\\": "controllers/",
+        "Models\\": "models/"
+      }
+    },
+    "require-dev": {},
+    "config": {
+            "bin-dir": "bin"
+        },
+        "scripts": {}
+}
