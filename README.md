@@ -15,7 +15,11 @@ Une interface d'administration permet d'ajouter ou de supprimer des questions. I
 
 J'ai développé une application très simple en HTML/CSS et PHP7.4.2. J'ai choisi d'utiliser une architecture MVC que j'ai développé moi même il y'a quelques années et qui utilise quelques éléments de Symfony.
 
+J'utilise dans ce projet le système de gestion de base de données MySql. Le fichier `database.sql` permet de créer la base de données, les tables et l'utilisateur utilisés. Si vous souhaitez modifier le nom de la base de données, le nom de l'utilisateur ou le mot de passe utilisés par le projet, rendez-vous dans le fichier `config.ini`.
+
 Pour la tester facilement j'ai mis en ligne l'application, vous pouvez suivre [ce lien](http://survey.newexplorers.fr/).
+
+L'interface administrateur se trouve [ici](survey.newexplorers.fr/admin)
 
 
 

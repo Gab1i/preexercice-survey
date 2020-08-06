@@ -80,7 +80,8 @@ class ModelSurvey extends Model {
 	public function GetFuturNum() {
 		$request = 'SELECT MAX(question_order)+1 as value FROM `questions`';
 		$result = $this->Request($request)->fetch();
-		return $result['value'];
+
+		return is_null($result['value']) ? 1 : $result['value'];
 	}
 
 	public function QuestionExists($id) {
